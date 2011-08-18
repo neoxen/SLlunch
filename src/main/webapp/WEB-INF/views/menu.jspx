@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu" id="menu" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <menu:menu id="_menu" z="nZaf43BjUg1iM0v70HJVEsXDopc=">
+        <menu:category id="c_restaurent" z="dN+VEeZJReE2IGb7eRGRy7jz5BI=">
+            <menu:item id="i_restaurent_new" messageCode="global_menu_new" url="/restaurents?form" z="Sor5oUYoi9B86U0cYer3/9fYrAE="/>
+            <menu:item id="i_restaurent_list" messageCode="global_menu_list" url="/restaurents?page=1&amp;size=${empty param.size ? 10 : param.size}" z="0ZstUR8wXdvP6esJ2CSkFsWoA9s="/>
+        </menu:category>
+        <menu:category id="c_dish" z="j8FLgWDtPzh9Mrs12aKgE8qFyuU=">
+            <menu:item id="i_dish_new" messageCode="global_menu_new" url="/dishes?form" z="+/BW15xwblN53Yk62I51ZAFz1M4="/>
+            <menu:item id="i_dish_list" messageCode="global_menu_list" url="/dishes?page=1&amp;size=${empty param.size ? 10 : param.size}" z="3lu7o6gi0lA3B2ygq5sgeovZgAk="/>
+        </menu:category>
+        <menu:category id="c_person" z="Cz66KzcF6GdyygpbYfiE+EkFFFA=">
+            <menu:item id="i_person_new" messageCode="global_menu_new" url="/people?form" z="IlD8NFD64X8egaRrgHbQeWKT68I="/>
+            <menu:item id="i_person_list" messageCode="global_menu_list" url="/people?page=1&amp;size=${empty param.size ? 10 : param.size}" z="MFjeqYeiMgVzk2P/OWfFpXZhhS4="/>
+        </menu:category>
+        <menu:category id="c_dishorder" z="0RXn5tsLv8FzNVmt1UjrVhIvcl4=">
+            <menu:item id="i_dishorder_new" messageCode="global_menu_new" url="/dishorders?form" z="ioUZ03g/B7Iq7CoVdpPJ9CHV0Tw="/>
+            <menu:item id="i_dishorder_list" messageCode="global_menu_list" url="/dishorders?page=1&amp;size=${empty param.size ? 10 : param.size}" z="d07xnBVm2lPIGz1xad/0Uewbyto="/>
+        </menu:category>
+    </menu:menu>
+</div>

@@ -1,0 +1,26 @@
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log opened at 2011-08-18 10:03:48
+project --topLevelPackage cn.shenlusoft.java.lunchorder
+persistence setup --provider HIBERNATE --database MYSQL 
+entity --class ~.domain.Restaurent --testAutomatically 
+field string --fieldName name --notNull --sizeMin 2
+field number --fieldName telephone --type java.lang.Long 
+entity --class ~.domain.Dish --testAutomatically 
+field string --fieldName name --notNull --sizeMin 2
+field number --type double --fieldName price --notNull 
+field reference --fieldName restaurent --type ~.domain.Restaurent
+// [failed] entity --class ~.domain.Order --testAutomatically 
+entity --class ~.domain.DishOrder --testAutomatically 
+entity --class ~.domain.Person --testAutomatically 
+field string --fieldName name --notNull --sizeMin 2
+field reference --fieldName person --type ~.domain.Person --class ~.domain.DishOrder 
+field set --type ~.domain.Dish --fieldName dishes 
+field date --fieldName orderDate --type java.util.Date 
+field number --fieldName total --type double 
+// perform tests
+// [failed] quit
+// quit
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log closed at 2011-08-18 12:01:12
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log opened at 2011-08-18 14:20:27
+controller all --package ~.web
+quit
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log closed at 2011-08-18 14:22:16

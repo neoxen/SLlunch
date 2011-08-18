@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_cn_shenlusoft_java_lunchorder_domain_DishOrder" object="${dishorder}" path="/dishorders" z="AyzAVFyes8xCmODIiUPQ9hjyiqE=">
+        <field:display field="person" id="s_cn_shenlusoft_java_lunchorder_domain_DishOrder_person" object="${dishorder}" z="yPfOYk6NfYvja8NHRr6MHhIuTQk="/>
+        <field:display field="dishes" id="s_cn_shenlusoft_java_lunchorder_domain_DishOrder_dishes" object="${dishorder}" z="fN5tCtnz7c4KyUg0DQn8bprMrjo="/>
+        <field:display date="true" dateTimePattern="${dishOrder_orderdate_date_format}" field="orderDate" id="s_cn_shenlusoft_java_lunchorder_domain_DishOrder_orderDate" object="${dishorder}" z="85bFzBKVTgF2U0Groe9hDJn098Q="/>
+        <field:display field="total" id="s_cn_shenlusoft_java_lunchorder_domain_DishOrder_total" object="${dishorder}" z="3+aP5ohvf3OJqkaWXASFOjD3RAk="/>
+    </page:show>
+</div>

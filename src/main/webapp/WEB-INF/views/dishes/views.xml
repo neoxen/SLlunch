@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+    <definition extends="default" name="dishes/list">
+        <put-attribute name="body" value="/WEB-INF/views/dishes/list.jspx"/>
+    </definition>
+<definition extends="default" name="dishes/show">
+        <put-attribute name="body" value="/WEB-INF/views/dishes/show.jspx"/>
+    </definition>
+<definition extends="default" name="dishes/create">
+        <put-attribute name="body" value="/WEB-INF/views/dishes/create.jspx"/>
+    </definition>
+<definition extends="default" name="dishes/update">
+        <put-attribute name="body" value="/WEB-INF/views/dishes/update.jspx"/>
+    </definition>
+</tiles-definitions>
