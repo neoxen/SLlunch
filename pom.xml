@@ -4,7 +4,7 @@
     <groupId>cn.shenlusoft.java.lunchorder</groupId>
     <artifactId>lunchorder</artifactId>
     <packaging>war</packaging>
-    <version>0.1.0.BUILD-SNAPSHOT</version>
+    <version>3.0</version>
     <name>lunchorder</name>
     <properties>
         <roo.version>1.1.5.RELEASE</roo.version>
