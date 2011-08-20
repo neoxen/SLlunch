@@ -6,35 +6,30 @@
     <jsp:output omit-xml-declaration="yes"/>
 
     <spring:url value="/" var="home"/>
-  <span>
+
+    <div style="text-align: right">
+  <span style="float:left">
     <a href="${home}">
         <spring:message code="button_home"/>
     </a>
-  </span>
-    <c:if test="${pageContext['request'].userPrincipal != null}">
-        <c:out value=" | "/>
+
+        <c:if test="${pageContext['request'].userPrincipal != null}">
+            <c:out value=" | "/>
     <span>
       <spring:url value="/resources/j_spring_security_logout" var="logout"/>
       <a href="${logout}">
           <spring:message code="security_logout"/>
       </a>
     </span>
-    </c:if>
+        </c:if>
 
-  <span id="language">
-    <c:out value=" | "/>
-    <spring:message code="global_language"/>
-    <c:out value=": "/>
-          <util:language label="Chinese" locale="zh_CN"/>
-  <util:language label="English" locale="en"/>
-    </span>
-    <util:theme/>
 
-    <spring:url value="/resources/images/springsource-logo.png" var="logo"/>
-    <spring:message code="global_sponsored" htmlEscape="false" var="sponsored"/>
+        <util:theme/>
+      </span>
   <span>
-    <a href="http://springsource.com" title="${fn:escapeXml(sponsored)}">
-        <img align="right" alt="${fn:escapeXml(sponsored)}" src="${logo}"/>
-    </a>
+
+      <spring:message code="copyright_message" htmlEscape="false"/>
+
   </span>
+    </div>
 </div>

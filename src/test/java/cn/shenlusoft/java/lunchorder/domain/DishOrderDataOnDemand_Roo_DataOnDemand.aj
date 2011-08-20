@@ -6,6 +6,7 @@ package cn.shenlusoft.java.lunchorder.domain;
 import cn.shenlusoft.java.lunchorder.domain.DishOrder;
 import cn.shenlusoft.java.lunchorder.domain.Person;
 import cn.shenlusoft.java.lunchorder.domain.PersonDataOnDemand;
+import java.lang.String;
 import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -34,6 +35,7 @@ privileged aspect DishOrderDataOnDemand_Roo_DataOnDemand {
         DishOrder obj = new DishOrder();
         setOrderDate(obj, index);
         setPerson(obj, index);
+        setRemark(obj, index);
         setTotal(obj, index);
         return obj;
     }
@@ -46,6 +48,11 @@ privileged aspect DishOrderDataOnDemand_Roo_DataOnDemand {
     public void DishOrderDataOnDemand.setPerson(DishOrder obj, int index) {
         Person person = personDataOnDemand.getRandomPerson();
         obj.setPerson(person);
+    }
+    
+    public void DishOrderDataOnDemand.setRemark(DishOrder obj, int index) {
+        String remark = "remark_" + index;
+        obj.setRemark(remark);
     }
     
     public void DishOrderDataOnDemand.setTotal(DishOrder obj, int index) {

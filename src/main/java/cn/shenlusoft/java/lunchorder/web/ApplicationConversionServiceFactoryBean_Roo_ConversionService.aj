@@ -34,7 +34,7 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     
     static class cn.shenlusoft.java.lunchorder.web.ApplicationConversionServiceFactoryBean.DishOrderConverter implements Converter<DishOrder, String> {
         public String convert(DishOrder dishOrder) {
-            return new StringBuilder().append(dishOrder.getOrderDate()).append(" ").append(dishOrder.getTotal()).toString();
+            return new StringBuilder().append(dishOrder.getOrderDate()).append(" ").append(dishOrder.getTotal()).append(" ").append(dishOrder.getRemark()).toString();
         }
         
     }

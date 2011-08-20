@@ -24,3 +24,7 @@ field number --fieldName total --type double
 controller all --package ~.web
 quit
 // Spring Roo 1.1.5.RELEASE [rev d3a68c3] log closed at 2011-08-18 14:22:16
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log opened at 2011-08-19 10:38:30
+field string --class ~.domain.DishOrder --fieldName remark 
+quit
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log closed at 2011-08-19 17:25:31

@@ -31,4 +31,6 @@ public class DishOrder {
     private Date orderDate;
 
     private double total;
+
+    private String remark;
 }

@@ -13,6 +13,7 @@ privileged aspect DishOrder_Roo_ToString {
         sb.append("Id: ").append(getId()).append(", ");
         sb.append("OrderDate: ").append(getOrderDate()).append(", ");
         sb.append("Person: ").append(getPerson()).append(", ");
+        sb.append("Remark: ").append(getRemark()).append(", ");
         sb.append("Total: ").append(getTotal()).append(", ");
         sb.append("Version: ").append(getVersion());
         return sb.toString();

@@ -3,11 +3,12 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_cn_shenlusoft_java_lunchorder_domain_DishOrder" items="${dishorders}" z="hoKi259vRstcfBe84R3ccOoD24k=">
-        <table:table data="${dishorders}" id="l_cn_shenlusoft_java_lunchorder_domain_DishOrder" path="/dishorders" z="/2glGA+FIXhYYVR9vl6MwtlwJTw=">
+        <table:table data="${dishorders}" id="l_cn_shenlusoft_java_lunchorder_domain_DishOrder" path="/dishorders" z="/2glGA+FIXhYYVR9vl6MwtlwJTw=" >
             <table:column id="c_cn_shenlusoft_java_lunchorder_domain_DishOrder_person" property="person" z="1oWn2aI6eGiPQ2Zdz75vpnO3cOQ="/>
             <table:column id="c_cn_shenlusoft_java_lunchorder_domain_DishOrder_dishes" property="dishes" z="UM/tBTALPjnUaMRTtpWw8yeUauA="/>
             <table:column date="true" dateTimePattern="${dishOrder_orderdate_date_format}" id="c_cn_shenlusoft_java_lunchorder_domain_DishOrder_orderDate" property="orderDate" z="IjQ7rhbf+dRfg/HzU8S1RzQMl4c="/>
             <table:column id="c_cn_shenlusoft_java_lunchorder_domain_DishOrder_total" property="total" z="MxwVnmYWUUH6XHJZ4Sw6LcVe09U="/>
+            <table:column id="c_cn_shenlusoft_java_lunchorder_domain_DishOrder_remark" property="remark" z="3iTuxIy3Bmn61asj7I/gH/fnIKE="/>
         </table:table>
     </page:list>
 </div>

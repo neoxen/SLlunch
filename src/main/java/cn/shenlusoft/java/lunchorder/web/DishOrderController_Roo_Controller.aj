@@ -92,7 +92,7 @@ privileged aspect DishOrderController_Roo_Controller {
         DishOrder.findDishOrder(id).remove();
         uiModel.asMap().clear();
         uiModel.addAttribute("page", (page == null) ? "1" : page.toString());
-        uiModel.addAttribute("size", (size == null) ? "10" : size.toString());
+        uiModel.addAttribute("size", (size == null) ? "25" : size.toString());
         return "redirect:/dishorders";
     }
     

@@ -5,6 +5,7 @@ package cn.shenlusoft.java.lunchorder.domain;
 
 import cn.shenlusoft.java.lunchorder.domain.Dish;
 import cn.shenlusoft.java.lunchorder.domain.Person;
+import java.lang.String;
 import java.util.Date;
 import java.util.Set;
 
@@ -40,6 +41,14 @@ privileged aspect DishOrder_Roo_JavaBean {
     
     public void DishOrder.setTotal(double total) {
         this.total = total;
+    }
+    
+    public String DishOrder.getRemark() {
+        return this.remark;
+    }
+    
+    public void DishOrder.setRemark(String remark) {
+        this.remark = remark;
     }
     
 }

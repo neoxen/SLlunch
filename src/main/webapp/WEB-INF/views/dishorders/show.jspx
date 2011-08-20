@@ -7,5 +7,6 @@
         <field:display field="dishes" id="s_cn_shenlusoft_java_lunchorder_domain_DishOrder_dishes" object="${dishorder}" z="fN5tCtnz7c4KyUg0DQn8bprMrjo="/>
         <field:display date="true" dateTimePattern="${dishOrder_orderdate_date_format}" field="orderDate" id="s_cn_shenlusoft_java_lunchorder_domain_DishOrder_orderDate" object="${dishorder}" z="85bFzBKVTgF2U0Groe9hDJn098Q="/>
         <field:display field="total" id="s_cn_shenlusoft_java_lunchorder_domain_DishOrder_total" object="${dishorder}" z="3+aP5ohvf3OJqkaWXASFOjD3RAk="/>
+        <field:display field="remark" id="s_cn_shenlusoft_java_lunchorder_domain_DishOrder_remark" object="${dishorder}" z="tBFtRUqpob9GBYLmBnw63XvDYOk="/>
     </page:show>
 </div>

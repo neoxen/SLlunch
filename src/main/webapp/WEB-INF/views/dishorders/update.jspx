@@ -5,7 +5,8 @@
     <form:update id="fu_cn_shenlusoft_java_lunchorder_domain_DishOrder" modelAttribute="dishOrder" path="/dishorders" versionField="Version" z="vkFaXEyfyqX2wjLURJ4P4oHV3DA=">
         <field:select field="person" id="c_cn_shenlusoft_java_lunchorder_domain_DishOrder_person" itemValue="id" items="${people}" path="/people" z="ZpuHJiNNjdWVbEnyb7c0PgbToik="/>
         <field:select field="dishes" id="c_cn_shenlusoft_java_lunchorder_domain_DishOrder_dishes" itemValue="id" items="${dishes}" multiple="true" path="/dishes" z="wwXYDb8XLYQj2JlAxyly+UKOFSY="/>
-        <field:datetime dateTimePattern="${dishOrder_orderdate_date_format}" field="orderDate" id="c_cn_shenlusoft_java_lunchorder_domain_DishOrder_orderDate" z="GjDPJZERmm5LwViF3zKFlV2AFMk="/>
-        <field:input field="total" id="c_cn_shenlusoft_java_lunchorder_domain_DishOrder_total" z="ZghPjLX+4lXIBI0xgzzreT/ulo0="/>
+        <!-- field datetime dateTimePattern=" {dishOrder_orderdate_date_format}" field="orderDate" id="c_cn_shenlusoft_java_lunchorder_domain_DishOrder_orderDate" z="GjDPJZERmm5LwViF3zKFlV2AFMk="/ -->
+        <!-- field input field="total" id="c_cn_shenlusoft_java_lunchorder_domain_DishOrder_total" z="ZghPjLX+4lXIBI0xgzzreT/ulo0="/ -->
+        <field:input field="remark" id="c_cn_shenlusoft_java_lunchorder_domain_DishOrder_remark" z="o2VvuZhDWI9aACrZormZ82BMEA8="/>
     </form:update>
 </div>
