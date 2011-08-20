@@ -10,6 +10,7 @@ import java.io.UnsupportedEncodingException;
 import java.lang.Integer;
 import java.lang.Long;
 import java.lang.String;
+import java.util.Calendar;
 import java.util.Collection;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
@@ -35,6 +36,9 @@ privileged aspect DishOrderController_Roo_Controller {
             return "dishorders/create";
         }
         uiModel.asMap().clear();
+        dishOrder.setOrderDate(Calendar.getInstance().getTime());
+        //TODO: calculate the total price from the Set of Dishes
+        //dishOrder.setTotal(15.0);
         dishOrder.persist();
         return "redirect:/dishorders/" + encodeUrlPathSegment(dishOrder.getId().toString(), httpServletRequest);
     }
@@ -76,6 +80,7 @@ privileged aspect DishOrderController_Roo_Controller {
             return "dishorders/update";
         }
         uiModel.asMap().clear();
+        dishOrder.setOrderDate(Calendar.getInstance().getTime());
         dishOrder.merge();
         return "redirect:/dishorders/" + encodeUrlPathSegment(dishOrder.getId().toString(), httpServletRequest);
     }
