@@ -12,6 +12,8 @@ import java.lang.Long;
 import java.lang.String;
 import java.util.Calendar;
 import java.util.Collection;
+import java.util.Iterator;
+import java.util.Set;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import org.joda.time.format.DateTimeFormat;
@@ -36,9 +38,19 @@ privileged aspect DishOrderController_Roo_Controller {
             return "dishorders/create";
         }
         uiModel.asMap().clear();
+
+        //set the order time automatically
         dishOrder.setOrderDate(Calendar.getInstance().getTime());
-        //TODO: calculate the total price from the Set of Dishes
-        //dishOrder.setTotal(15.0);
+
+        //calculate the total price from the Set of Dishes
+        Set<Dish> orderedDishes = dishOrder.getDishes();
+        Iterator<Dish> ita = orderedDishes.iterator();
+        double totalPrice = 0.0;
+        while (ita.hasNext() == true){
+            Dish orderedDish = ita.next();
+            totalPrice = totalPrice + orderedDish.getPrice();
+        }
+        dishOrder.setTotal(totalPrice);
         dishOrder.persist();
         return "redirect:/dishorders/" + encodeUrlPathSegment(dishOrder.getId().toString(), httpServletRequest);
     }
@@ -80,7 +92,19 @@ privileged aspect DishOrderController_Roo_Controller {
             return "dishorders/update";
         }
         uiModel.asMap().clear();
+
+        //set the order time automatically
         dishOrder.setOrderDate(Calendar.getInstance().getTime());
+
+        //calculate the total price from the Set of Dishes
+        Set<Dish> orderedDishes = dishOrder.getDishes();
+        Iterator<Dish> ita = orderedDishes.iterator();
+        double totalPrice = 0.0;
+        while (ita.hasNext() == true){
+            Dish orderedDish = ita.next();
+            totalPrice = totalPrice + orderedDish.getPrice();
+        }
+        dishOrder.setTotal(totalPrice);
         dishOrder.merge();
         return "redirect:/dishorders/" + encodeUrlPathSegment(dishOrder.getId().toString(), httpServletRequest);
     }
