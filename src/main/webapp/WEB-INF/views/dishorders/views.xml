@@ -13,4 +13,10 @@
 <definition extends="default" name="dishorders/update">
         <put-attribute name="body" value="/WEB-INF/views/dishorders/update.jspx"/>
     </definition>
+<definition extends="default" name="dishorders/findDishOrdersByOrderDateEquals">
+        <put-attribute name="body" value="/WEB-INF/views/dishorders/findDishOrdersByOrderDateEquals.jspx"/>
+    </definition>
+<definition extends="default" name="dishorders/findDishOrdersByOrderDateGreaterThan">
+        <put-attribute name="body" value="/WEB-INF/views/dishorders/findDishOrdersByOrderDateGreaterThan.jspx"/>
+    </definition>
 </tiles-definitions>

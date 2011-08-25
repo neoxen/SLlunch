@@ -23,7 +23,7 @@ body {
 	margin-left: auto;
 
 	/* fix max-width incompatibility in IE6 */
-	width:expression(document.body.clientWidth > 800? "800px": "auto" );
+	width:expression(document.body.clientWidth > 1024? "1024px": "auto" );
 	
 	overflow:hidden;
 	display:block;

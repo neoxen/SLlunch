@@ -28,3 +28,15 @@ quit
 field string --class ~.domain.DishOrder --fieldName remark 
 quit
 // Spring Roo 1.1.5.RELEASE [rev d3a68c3] log closed at 2011-08-19 17:25:31
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log opened at 2011-08-23 11:05:06
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log opened at 2011-08-24 10:54:03
+controller class --class ~.web.DailyOrderReportController
+finder list --class ~.domain.DishOrder --filter date
+finder add --finderName findDishOrdersByOrderDateEquals
+quit
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log closed at 2011-08-24 12:08:52
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log opened at 2011-08-24 22:01:22
+finder list --class ~.domain.DishOrder --filter date
+finder add --finderName findDishOrdersByOrderDateGreaterThan
+quit
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log closed at 2011-08-24 23:36:24

@@ -8,5 +8,7 @@
         <!-- field datetime dateTimePattern=" {dishOrder_orderdate_date_format}" field="orderDate" id="c_cn_shenlusoft_java_lunchorder_domain_DishOrder_orderDate" z="GjDPJZERmm5LwViF3zKFlV2AFMk="/ -->
         <!-- field input field="total" id="c_cn_shenlusoft_java_lunchorder_domain_DishOrder_total" z="ZghPjLX+4lXIBI0xgzzreT/ulo0="/ -->
         <field:input field="remark" id="c_cn_shenlusoft_java_lunchorder_domain_DishOrder_remark" z="o2VvuZhDWI9aACrZormZ82BMEA8="/>
+        <field:datetime dateTimePattern="${dishOrder_orderdate_date_format}" field="orderDate" id="c_cn_shenlusoft_java_lunchorder_domain_DishOrder_orderDate" z="GjDPJZERmm5LwViF3zKFlV2AFMk="/>
+        <field:input field="total" id="c_cn_shenlusoft_java_lunchorder_domain_DishOrder_total" z="ZghPjLX+4lXIBI0xgzzreT/ulo0="/>
     </form:update>
 </div>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:find finderName="ByOrderDateGreaterThan" id="ff_cn_shenlusoft_java_lunchorder_domain_DishOrder" path="/dishorders" z="ISG/Z0yA3Cei9bPgi/jqz3ve968=">
+        <field:datetime dateTimePattern="${dishOrder_orderdate_date_format}" disableFormBinding="true" field="orderDate" id="f_cn_shenlusoft_java_lunchorder_domain_DishOrder_orderDate" required="true" z="sAdsyTx/377ZVipqiHOrglo3YMU="/>
+    </form:find>
+</div>

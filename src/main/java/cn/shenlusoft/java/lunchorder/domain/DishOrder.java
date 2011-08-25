@@ -17,13 +17,13 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 @RooJavaBean
 @RooToString
-@RooEntity
+@RooEntity(finders = { "findDishOrdersByOrderDateEquals", "findDishOrdersByOrderDateGreaterThan" })
 public class DishOrder {
 
     @ManyToOne
     private Person person;
 
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany(cascade = CascadeType.DETACH)
     private Set<Dish> dishes = new HashSet<Dish>();
 
     @Temporal(TemporalType.TIMESTAMP)
