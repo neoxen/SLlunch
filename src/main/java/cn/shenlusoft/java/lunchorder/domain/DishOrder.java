@@ -17,7 +17,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 @RooJavaBean
 @RooToString
-@RooEntity(finders = { "findDishOrdersByOrderDateEquals", "findDishOrdersByOrderDateGreaterThan" })
+@RooEntity(finders = { "findDishOrdersByOrderDateGreaterThan" })
 public class DishOrder {
 
     @ManyToOne

@@ -1,12 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" version="2.0">
-  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
-  <jsp:output omit-xml-declaration="yes"/>
-  <spring:message code="label_dailyorderreport_index" htmlEscape="false" var="title"/>
-  <util:panel id="title" title="${title}">
-    <spring:message code="application_name" htmlEscape="false" var="app_name"/>
-    <h3>
-      <spring:message arguments="${app_name}" code="welcome_titlepane"/>
-    </h3>
-  </util:panel>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags"
+     xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form"
+     xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <spring:message code="label_dailyorderreport_index" htmlEscape="false" var="title"/>
+    <page:list id="pl_cn_shenlusoft_java_lunchorder_domain_DishOrder" items="${dishorders}"
+               z="hoKi259vRstcfBe84R3ccOoD24k=">
+        <table:table data="${dishorders}" id="l_cn_shenlusoft_java_lunchorder_domain_DishOrder" path="/dishorders"
+                     z="/2glGA+FIXhYYVR9vl6MwtlwJTw=">
+            <table:column id="c_cn_shenlusoft_java_lunchorder_domain_DishOrder_person" maxLength="6" property="person"
+                          z="user-managed"/>
+            <table:column id="c_cn_shenlusoft_java_lunchorder_domain_DishOrder_dishes" maxLength="40" property="dishes"
+                          z="user-managed"/>
+            <!-- table column date="true" dateTimePattern=" {dishOrder_orderdate_date_format}" id="c_cn_shenlusoft_java_lunchorder_domain_DishOrder_orderDate" property="orderDate" z="IjQ7rhbf+dRfg/HzU8S1RzQMl4c="/ -->
+            <table:column id="c_cn_shenlusoft_java_lunchorder_domain_DishOrder_total" maxLength="4" property="total"
+                          z="user-managed"/>
+            <table:column id="c_cn_shenlusoft_java_lunchorder_domain_DishOrder_remark" maxLength="20" property="remark"
+                          z="user-managed"/>
+            <table:column date="true" dateTimePattern="${dishOrder_orderdate_date_format}"
+                          id="c_cn_shenlusoft_java_lunchorder_domain_DishOrder_orderDate" property="orderDate"
+                          render="false" z="user-managed"/>
+        </table:table>
+    </page:list>
+
+
 </div>

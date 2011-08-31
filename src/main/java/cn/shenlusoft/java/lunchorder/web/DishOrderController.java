@@ -33,7 +33,6 @@ public class DishOrderController {
 
         DishOrder newDO = new DishOrder();
 
-        logger.error(strIP);
         if (strIP.startsWith("192")) {
             TypedQuery<Person> person = Person.findPeopleByIpaddressEquals(strIP);
             Person p = person.getSingleResult();
