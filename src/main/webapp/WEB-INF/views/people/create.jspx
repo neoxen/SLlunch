@@ -4,6 +4,7 @@
     <jsp:output omit-xml-declaration="yes"/>
     <form:create id="fc_cn_shenlusoft_java_lunchorder_domain_Person" modelAttribute="person" path="/people" render="${empty dependencies}" z="Jwbb33waxsY7T3jG1lIMrWepCzc=">
         <field:input field="name" id="c_cn_shenlusoft_java_lunchorder_domain_Person_name" min="2" required="true" z="yhzQrNEpLjIxyJTM+tAYDiRDFAk="/>
+        <field:input field="ipaddress" id="c_cn_shenlusoft_java_lunchorder_domain_Person_ipaddress" z="1E3NaDgt4hPNuWSqaFDQIU+tHrE="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_cn_shenlusoft_java_lunchorder_domain_Person" render="${not empty dependencies}" z="FpZnaY1uuTrzexfJYba5jKgjoiw="/>
 </div>

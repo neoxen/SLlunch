@@ -14,12 +14,12 @@
         <menu:category id="c_person" z="Cz66KzcF6GdyygpbYfiE+EkFFFA=">
             <menu:item id="i_person_new" messageCode="global_menu_new" url="/people?form" z="IlD8NFD64X8egaRrgHbQeWKT68I="/>
             <menu:item id="i_person_list" messageCode="global_menu_list" url="/people?page=1&amp;size=${empty param.size ? 10 : param.size}" z="MFjeqYeiMgVzk2P/OWfFpXZhhS4="/>
+            <menu:item id="fi_person_ipaddressequals" messageCode="global_menu_find" url="/people?find=ByIpaddressEquals&amp;form" z="k10vBfh3q+0e3H7fesMGUBXC2Kw="/>
         </menu:category>
         <menu:category id="c_dishorder" z="0RXn5tsLv8FzNVmt1UjrVhIvcl4=">
             <menu:item id="i_dishorder_new" messageCode="global_menu_new" url="/dishorders?form" z="ioUZ03g/B7Iq7CoVdpPJ9CHV0Tw="/>
             <menu:item id="i_dishorder_list" messageCode="global_menu_list" url="/dishorders?page=1&amp;size=${empty param.size ? 10 : param.size}" z="d07xnBVm2lPIGz1xad/0Uewbyto="/>
-            <menu:item id="fi_dishorder_orderdateequals" messageCode="global_menu_find" url="/dishorders?find=ByOrderDateEquals&amp;form" z="ix+XnOtV/r2iut/uMpFdSKpAIRs="/>
-            <menu:item id="fi_dishorder_orderdategreaterthan" messageCode="global_menu_find" url="/dishorders?find=ByOrderDateGreaterThan&amp;form" z="AvZTYsHzn38YokYjbFJC8R1i6Ng="/>
+            <menu:item id="fi_dishorder_orderdategreaterthan" messageCode="global_generic" url="/dishorders?find=ByOrderDateGreaterThan&amp;form" z="AvZTYsHzn38YokYjbFJC8R1i6Ng="/>
         </menu:category>
         <menu:category id="c_controller" z="nj8Dm3hojIyIEyPkwE1UMDIs+K8=">
             <menu:item id="i_controller__dailyorderreportindex_id" messageCode="global_generic" url="/dailyorderreport/index" z="9bAelGN3jliZjAOuoa3Zykqtiuk="/>

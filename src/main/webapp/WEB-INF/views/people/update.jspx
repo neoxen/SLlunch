@@ -4,5 +4,6 @@
     <jsp:output omit-xml-declaration="yes"/>
     <form:update id="fu_cn_shenlusoft_java_lunchorder_domain_Person" modelAttribute="person" path="/people" versionField="Version" z="tPWC2pBCn3g96+mqyPv7pdHoxyI=">
         <field:input field="name" id="c_cn_shenlusoft_java_lunchorder_domain_Person_name" min="2" required="true" z="yhzQrNEpLjIxyJTM+tAYDiRDFAk="/>
+        <field:input field="ipaddress" id="c_cn_shenlusoft_java_lunchorder_domain_Person_ipaddress" z="1E3NaDgt4hPNuWSqaFDQIU+tHrE="/>
     </form:update>
 </div>

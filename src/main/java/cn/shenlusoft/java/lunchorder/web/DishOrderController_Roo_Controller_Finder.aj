@@ -14,19 +14,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 privileged aspect DishOrderController_Roo_Controller_Finder {
     
-    @RequestMapping(params = { "find=ByOrderDateEquals", "form" }, method = RequestMethod.GET)
-    public String DishOrderController.findDishOrdersByOrderDateEqualsForm(Model uiModel) {
-        addDateTimeFormatPatterns(uiModel);
-        return "dishorders/findDishOrdersByOrderDateEquals";
-    }
-    
-    @RequestMapping(params = "find=ByOrderDateEquals", method = RequestMethod.GET)
-    public String DishOrderController.findDishOrdersByOrderDateEquals(@RequestParam("orderDate") @DateTimeFormat(style = "M-") Date orderDate, Model uiModel) {
-        uiModel.addAttribute("dishorders", DishOrder.findDishOrdersByOrderDateEquals(orderDate).getResultList());
-        addDateTimeFormatPatterns(uiModel);
-        return "dishorders/list";
-    }
-    
     @RequestMapping(params = { "find=ByOrderDateGreaterThan", "form" }, method = RequestMethod.GET)
     public String DishOrderController.findDishOrdersByOrderDateGreaterThanForm(Model uiModel) {
         addDateTimeFormatPatterns(uiModel);

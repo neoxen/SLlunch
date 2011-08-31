@@ -24,8 +24,14 @@ privileged aspect PersonDataOnDemand_Roo_DataOnDemand {
     
     public Person PersonDataOnDemand.getNewTransientPerson(int index) {
         Person obj = new Person();
+        setIpaddress(obj, index);
         setName(obj, index);
         return obj;
+    }
+    
+    public void PersonDataOnDemand.setIpaddress(Person obj, int index) {
+        String ipaddress = "ipaddress_" + index;
+        obj.setIpaddress(ipaddress);
     }
     
     public void PersonDataOnDemand.setName(Person obj, int index) {

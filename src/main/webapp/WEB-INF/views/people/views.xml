@@ -13,4 +13,7 @@
 <definition extends="default" name="people/update">
         <put-attribute name="body" value="/WEB-INF/views/people/update.jspx"/>
     </definition>
+<definition extends="default" name="people/findPeopleByIpaddressEquals">
+        <put-attribute name="body" value="/WEB-INF/views/people/findPeopleByIpaddressEquals.jspx"/>
+    </definition>
 </tiles-definitions>
