@@ -19,7 +19,7 @@
         <menu:category id="c_dishorder" z="0RXn5tsLv8FzNVmt1UjrVhIvcl4=">
             <menu:item id="i_dishorder_new" messageCode="global_menu_new" url="/dishorders?form" z="ioUZ03g/B7Iq7CoVdpPJ9CHV0Tw="/>
             <menu:item id="i_dishorder_list" messageCode="global_menu_list" url="/dishorders?page=1&amp;size=${empty param.size ? 10 : param.size}" z="d07xnBVm2lPIGz1xad/0Uewbyto="/>
-            <menu:item id="fi_dishorder_orderdategreaterthan" messageCode="global_generic" url="/dishorders?find=ByOrderDateGreaterThan&amp;form" z="AvZTYsHzn38YokYjbFJC8R1i6Ng="/>
+            <menu:item id="fi_dishorder_orderdategreaterthan" messageCode="global_generic" url="/dishorders?find=ByOrderDateGreaterThan&amp;form" z="user-managed"/>
         </menu:category>
         <menu:category id="c_controller" z="nj8Dm3hojIyIEyPkwE1UMDIs+K8=">
             <menu:item id="i_controller__dailyorderreportindex_id" messageCode="global_generic" url="/dailyorderreport/index" z="9bAelGN3jliZjAOuoa3Zykqtiuk="/>
