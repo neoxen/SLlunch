@@ -42,3 +42,19 @@ quit
 // Spring Roo 1.1.5.RELEASE [rev d3a68c3] log closed at 2011-08-24 23:36:24
 //quit
 // Spring Roo 1.1.5.RELEASE [rev d3a68c3] log closed at 2011-08-29 21:29:34
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log opened at 2011-08-30 11:08:37
+hint
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log opened at 2011-08-30 11:42:23
+download status
+download accept terms of use
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log opened at 2011-08-30 16:04:37
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log opened at 2011-08-30 16:28:19
+field string --class ~.domain.Person --fieldName ipaddress
+finder list --class ~.domain.Person --filter addr
+finder add --finderName findPeopleByIpaddressEquals 
+logging setup --level DEBUG 
+quit
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log closed at 2011-08-30 17:30:01
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log opened at 2011-08-30 20:04:49
+logging setup --level ERROR 
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log opened at 2011-08-31 10:03:36

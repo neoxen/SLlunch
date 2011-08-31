@@ -15,4 +15,12 @@ privileged aspect Person_Roo_JavaBean {
         this.name = name;
     }
     
+    public String Person.getIpaddress() {
+        return this.ipaddress;
+    }
+    
+    public void Person.setIpaddress(String ipaddress) {
+        this.ipaddress = ipaddress;
+    }
+    
 }

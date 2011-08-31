@@ -41,7 +41,7 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     
     static class cn.shenlusoft.java.lunchorder.web.ApplicationConversionServiceFactoryBean.PersonConverter implements Converter<Person, String> {
         public String convert(Person person) {
-            return new StringBuilder().append(person.getName()).toString();
+            return new StringBuilder().append(person.getName()).append(" ").append(person.getIpaddress()).toString();
         }
         
     }

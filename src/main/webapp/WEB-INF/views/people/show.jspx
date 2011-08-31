@@ -4,5 +4,6 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:show id="ps_cn_shenlusoft_java_lunchorder_domain_Person" object="${person}" path="/people" z="1iasQ98riAcPdyuyyrKj919105o=">
         <field:display field="name" id="s_cn_shenlusoft_java_lunchorder_domain_Person_name" object="${person}" z="ZlQoAkkkzOADzL3OAiHSLpBq2lA="/>
+        <field:display field="ipaddress" id="s_cn_shenlusoft_java_lunchorder_domain_Person_ipaddress" object="${person}" z="HqsqVSNABIptxwHFWzI/BcJ34VM="/>
     </page:show>
 </div>

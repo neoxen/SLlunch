@@ -25,13 +25,6 @@ import org.springframework.web.util.WebUtils;
 
 privileged aspect DishOrderController_Roo_Controller {
     
-    @RequestMapping(params = "form", method = RequestMethod.GET)
-    public String DishOrderController.createForm(Model uiModel) {
-        uiModel.addAttribute("dishOrder", new DishOrder());
-        addDateTimeFormatPatterns(uiModel);
-        return "dishorders/create";
-    }
-    
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public String DishOrderController.show(@PathVariable("id") Long id, Model uiModel) {
         addDateTimeFormatPatterns(uiModel);

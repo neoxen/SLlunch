@@ -8,10 +8,12 @@ import javax.validation.constraints.Size;
 
 @RooJavaBean
 @RooToString
-@RooEntity
+@RooEntity(finders = { "findPeopleByIpaddressEquals" })
 public class Person {
 
     @NotNull
     @Size(min = 2)
     private String name;
+
+    private String ipaddress;
 }
