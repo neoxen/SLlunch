@@ -3,54 +3,11 @@
 
 package cn.shenlusoft.java.lunchorder.web;
 
-import cn.shenlusoft.java.lunchorder.domain.Dish;
-import cn.shenlusoft.java.lunchorder.domain.DishOrder;
-import cn.shenlusoft.java.lunchorder.domain.Person;
-import cn.shenlusoft.java.lunchorder.domain.Restaurent;
-import java.lang.String;
-import org.springframework.core.convert.converter.Converter;
-import org.springframework.format.FormatterRegistry;
-
 privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService {
-    
-    public void ApplicationConversionServiceFactoryBean.installLabelConverters(FormatterRegistry registry) {
-        registry.addConverter(new DishConverter());
-        registry.addConverter(new DishOrderConverter());
-        registry.addConverter(new PersonConverter());
-        registry.addConverter(new RestaurentConverter());
-    }
     
     public void ApplicationConversionServiceFactoryBean.afterPropertiesSet() {
         super.afterPropertiesSet();
         installLabelConverters(getObject());
-    }
-    
-    static class cn.shenlusoft.java.lunchorder.web.ApplicationConversionServiceFactoryBean.DishConverter implements Converter<Dish, String> {
-        public String convert(Dish dish) {
-            return new StringBuilder().append(dish.getName()).append(" ").append(dish.getPrice()).toString();
-        }
-        
-    }
-    
-    static class cn.shenlusoft.java.lunchorder.web.ApplicationConversionServiceFactoryBean.DishOrderConverter implements Converter<DishOrder, String> {
-        public String convert(DishOrder dishOrder) {
-            return new StringBuilder().append(dishOrder.getOrderDate()).append(" ").append(dishOrder.getTotal()).append(" ").append(dishOrder.getRemark()).toString();
-        }
-        
-    }
-    
-    static class cn.shenlusoft.java.lunchorder.web.ApplicationConversionServiceFactoryBean.PersonConverter implements Converter<Person, String> {
-        public String convert(Person person) {
-            return new StringBuilder().append(person.getName()).append(" ").append(person.getIpaddress()).toString();
-        }
-        
-    }
-    
-    static class cn.shenlusoft.java.lunchorder.web.ApplicationConversionServiceFactoryBean.RestaurentConverter implements Converter<Restaurent, String> {
-        public String convert(Restaurent restaurent) {
-            return new StringBuilder().append(restaurent.getName()).append(" ").append(restaurent.getTelephone()).toString();
-        }
-        
     }
     
 }
