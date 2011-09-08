@@ -3,7 +3,9 @@ package cn.shenlusoft.java.lunchorder.web;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import cn.shenlusoft.java.lunchorder.domain.Dish;
 import cn.shenlusoft.java.lunchorder.domain.DishOrder;
+import cn.shenlusoft.java.lunchorder.domain.Restaurent;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.hibernate.dialect.Oracle10gDialect;
@@ -20,7 +22,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import java.util.Date;
+import java.util.*;
 
 //  RequestMapping("/dailyorderreport/**")
 @RequestMapping("/")
@@ -46,9 +48,25 @@ public class DailyOrderReportController {
         dt =  DateTimeFormat.forPattern("yyyy-MM-dd HH:mm:ss").parseDateTime(strDt + " 00:00:00");
         Date orderDate =  dt.toDate();
 
-        uiModel.addAttribute("dishorders", DishOrder.findDishOrdersByOrderDateGreaterThan(orderDate).getResultList());
+        List<DishOrder> dishOrderList = DishOrder.findDishOrdersByOrderDateGreaterThan(orderDate).getResultList();
+
+        uiModel.addAttribute("dishorders", dishOrderList);
+
+        ListIterator<DishOrder> dishOrderListIterator = dishOrderList.listIterator();
+
+        ArrayList<Restaurent> ral = new ArrayList<Restaurent>();
+        ArrayList<Dish> dishAL = new ArrayList<Dish>();
+
+        while (dishOrderListIterator.hasNext() ){
+            DishOrder dorder = dishOrderListIterator.next();
+            Set<Dish> dishSet = dorder.getDishes();
+            //TODO
+
+        }
+
         addDateTimeFormatPatterns(uiModel);
-        return "dishorders/list";
+        //return "dishorders/list";
+        return "dailyorderreport/index";
     }
 
     void addDateTimeFormatPatterns(Model uiModel) {

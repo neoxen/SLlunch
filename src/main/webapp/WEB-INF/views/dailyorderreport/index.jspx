@@ -1,10 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags"
-     xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form"
-     xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+     xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0"
+     xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:c="http://java.sun.com/jsp/jstl/core" >
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <spring:message code="label_dailyorderreport_index" htmlEscape="false" var="title"/>
+
+    <spring:url value="/dishorders?form" var="newdishorder"/>
+
+    <a href="${newdishorder}" class="button" onclick="this.blur();">
+        <span>
+            <spring:message code="label_cn_shenlusoft_java_lunchorder_domain_dishorder"/>
+        </span>
+    </a>
+
+
+
+    <c:out value="${dishorders}" />
+
     <page:list id="pl_cn_shenlusoft_java_lunchorder_domain_DishOrder" items="${dishorders}"
                z="hoKi259vRstcfBe84R3ccOoD24k=">
         <table:table data="${dishorders}" id="l_cn_shenlusoft_java_lunchorder_domain_DishOrder" path="/dishorders"
