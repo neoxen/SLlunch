@@ -14,9 +14,7 @@
         </span>
     </a>
 
-
-
-    <c:out value="${dishorders}" />
+    <c:out value="${dishlist}" />
 
     <page:list id="pl_cn_shenlusoft_java_lunchorder_domain_DishOrder" items="${dishorders}"
                z="hoKi259vRstcfBe84R3ccOoD24k=">

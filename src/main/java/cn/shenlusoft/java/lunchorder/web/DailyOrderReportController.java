@@ -60,9 +60,13 @@ public class DailyOrderReportController {
         while (dishOrderListIterator.hasNext() ){
             DishOrder dorder = dishOrderListIterator.next();
             Set<Dish> dishSet = dorder.getDishes();
+
+            dishAL.addAll(dishSet);
+
             //TODO
 
         }
+        uiModel.addAttribute("dishlist", dishAL);
 
         addDateTimeFormatPatterns(uiModel);
         //return "dishorders/list";
